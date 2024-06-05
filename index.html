@@ -24,15 +24,15 @@
         const segundos = document.getElementById("segundos")
         let tempo = new Date();
 
-        function updateClock() {
+        function atualizar_tempo() {
             let tempo = new Date();
             horas.innerHTML = tempo.getHours().toString().padStart(2, '0');
             minutos.innerHTML = tempo.getMinutes().toString().padStart(2, '0');
             segundos.innerHTML = tempo.getSeconds().toString().padStart(2, '0');
         }
 
-        updateClock();
-        setInterval(updateClock, 1000);
+        atualizar_tempo();
+        setInterval(atualizar_tempo, 1000);
 
 
 
