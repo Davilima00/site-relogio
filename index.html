@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>relogio</title>
+</head>
+<body>
+    <header>
+        <h1>relogio DAVI</h1>
+    </header>
+    <main>
+        <div class="relogio">
+            <h1 class="saida"><span id="horas">00</span>:<span id="minutos">00</span>:<span id="segundos">00</span></h1>
+
+        </div>
+
+    </main>
+
+    <script>
+        const horas = document.getElementById("horas")
+        const minutos = document.getElementById("minutos")
+        const segundos = document.getElementById("segundos")
+        let tempo = new Date();
+
+        function updateClock() {
+            let tempo = new Date();
+            horas.innerHTML = tempo.getHours().toString().padStart(2, '0');
+            minutos.innerHTML = tempo.getMinutes().toString().padStart(2, '0');
+            segundos.innerHTML = tempo.getSeconds().toString().padStart(2, '0');
+        }
+
+        updateClock();
+        setInterval(updateClock, 1000);
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>
+
